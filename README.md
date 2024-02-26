@@ -2,6 +2,8 @@
 
 Este repositório foi criado para servir como um ambiente de teste e desenvolvimento para aplicações Python voltadas para computação em nuvem. O objetivo principal é facilitar a criação, implementação e teste de soluções que envolvem integração com serviços de nuvem, como AWS, Azure, Google Cloud, entre outros.
 
+https://replit.com/
+
 ## Objetivo
 
 O objetivo deste repositório é oferecer um ponto de partida para desenvolvedores que desejam criar e testar aplicações na nuvem usando Python. Ele fornece uma estrutura organizada, exemplos práticos e testes automatizados para garantir a confiabilidade e a robustez das implementações.
