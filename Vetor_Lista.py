@@ -1,3 +1,3 @@
-frutas = ['Maça', 'banana', 'manga', 'uva']
+frutas = ['Maça', 'banana', 'manga', 'uva'] #index
 
 print(frutas)
