@@ -1,0 +1,288 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Java&#153; 2 SDK, Standard Edition v 1.3.1 - Informações de instalação</title>
+   <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body text="#000000" bgcolor="#FCF0BC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h1>Java&#153; 2 SDK, <br><font size="+2">Standard Edition v 1.3.1</font><br><font size="+1">para instalação em Linux</font></h1>
+
+<p>Leia a documentação a seguir antes de você <a href="#install">instalar</a> o Java&#153; 2 SDK a partir do CD.
+
+<p>Você leu o <a href="la-j2se.htm">contrato de licenciamento</a> do Java&#153; 2 SDK?
+
+<hr>
+
+<!--BODYCOPY Start-->
+
+<h3>Requisitos de sistema</h3>
+<p>Esta versão do Java 2 SDK é suportada em plataformas Intel Pentium 
+que rodam o kernel do Linux v 2.2.12 e glibc v2.1.2-11 ou posterior. É necessário um mínimo
+de 32 megabytes de RAM. Recomenda-se 48 megabytes de RAM, modo de cores
+de 16 bits, gerenciadores de janelas KDE e KWM usados em conjunto com os monitores
+configurados para hosts locais.
+
+<p>Verifique sua versão de glibc com o seguinte comando:
+
+<dl>
+	<dd><tt><b>ls /lib/libc-*</b></tt>
+</dl>
+
+<p>Você deve ter cerca de 75 megabytes de espaço livre em disco antes de tentar
+intalar o software do Java 2 SDK. Caso também instale o pacote separado
+de documentação que foi baixado, você precisará de 125 megabytes adicionais de espaço livre em disco.
+
+<p>A plataforma Linux suportada oficialmente para o J2SDK 1.3.1 é a RedHat Linux
+6.2 e a maior parte dos testes do J2SDK 1.3.1 para Linux foram feitos naquele 
+sistema operacional. Entretanto, o J2SDK 1.3.1 passou por testes limitados em 
+outros sistemas operacionais Linux. A tabela a seguir mostra as plataformas Linux,
+por locale, nas quais a Sun testou esta versão pelo menos de maneira limitada.
+Veja abaixo as informações sobre os <a href="#problems">problemas conhecidos</a>
+em vários sistemas operacionais Linux.
+
+<div align="center">
+<table border="1" width="80%" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF" bordercolor="#006666">
+<tr>
+	<th>Locale</th>
+	<th>Plataforma Linux testada</th>
+</tr>
+<tr>
+		<td>Inglês</td>
+		<td>Red Hat Linux 6.1
+		<br>Red Hat Linux 6.2
+		<br>Red Hat Linux 7.1
+		<br>Caldera OpenLinux 2.4
+		<br>Mandrake Linux 7.1
+		<br>Turbo Linux Workstation 6.0
+		<br>SuSe Linux 6.4</td>
+	</tr>
+
+	<tr>
+		<td>Alemão</td>
+		<td>Red Hat Linux 6.2</td>
+	</tr>
+	<tr>
+		<td>Japonês</td>
+		<td>Red Hat Linux 6.2J
+		<br>Red Hat Linux 6.2J Second Edition</td>
+	</tr>
+	<tr>
+		<td>Chinês simplificado</td>
+		<td>Turbo Linux Workstation 6.0</td>
+	</tr>
+</table>
+</div>
+
+<br><hr>
+
+<a NAME="problems"></a>
+<h3>Problemas conhecidos</h3>
+<p>O RedHat Linux 6.2 é a plataforma Linux suportada oficialmente pelo J2SDK
+1.3.1. Testes limitados foram feitos em outros sistemas operacionais Linux,
+e os que seguem são problemas conhecidos nas plataformas não-suportadas.
+
+<ul>
+	<li>Se você usa o <b>Red Hat Linux 7</b>, recomendamos a versão 7.1 em vez da 7.0. Testes limitados revelaram problemas quando se usa o J2SDK com o Red Hat Linux 7.0. Alguns deles estão descritos abaixo.</li><br><br>
+	<li>Quando <tt><b>System.exit(int)</b></tt> é invocado no <b>Red Hat 7.0</b>, o programa nunca termina com um valor diferente de zero. Este problema ocorre aparentemente devido a um erro na função <tt><b>exit</b></tt> na biblioteca <tt><b>libc.so</b></tt>. Para evitar este problema, use a versão suportada do Red Hat, versão 6.2, ou, se você quer usar o Red Hat 7, use a versão 7.1 em vez da 7.0.</li><br><br>
+	<li>No <b>RedHat Linux 7.0</b>, se você quiser usar o Classic VM em vez de um dos Java HotSpot VMs no J2SDK 1.3.1, você deve baixar e instalar o arquivo <tt><b>glibc-2.2-9.i386.rpm</b></tt> disponível no endereço <a href="http://www.redhat.com/support/errata/RHBA-2000-079.html" target="new">http://www.redhat.com/support/errata/RHBA-2000-079.html</a>. <i>Não</i> instale os arquivos i686 disponíveis na mesma página da Web, pois eles impedirão o funcionamento adequado dos Java HotSpot VMs no J2SDK 1.3.1.</li><br><br>
+	<li>Se usa o <b>RedHat Linux 7 Server</b>, você deve instalar manualmente <tt><b>compat-libstdc++-6.21-2.9.0.0.i386.rpm</b></tt> para evitar o "error while loading shared libraries" quando estiver usando os Java HotSpot VMs. Este arquivo está localizado no diretório <tt><b>/RedHat/RPMS</b></tt> no CD-ROM do RedHat Linux 7. Você também pode obter uma cópia deste arquivo do endereço <a href="http://rpmfind.net/" target="new">http://rpmfind.net</a>. Para instalar o arquivo, use este comando:
+
+	<dl>
+		<dd><tt><b>rpm --install compat-libstdc++-6.21-2.9.0.0.i386.rpm</b></tt></dd>
+	</dl>
+
+Não é necessário instalar manualmente <tt><b>compat-libstdc++-6.21-2.9.0.0.i386.rpm</b></tt> se você estiver usando o RedHat Linux 7 Workstation.</li><br><br>
+
+<li>Ao usar <b>versões do RedHat Linux diferentes de 6.1</b>, o arquivo <tt><b>font.properties</b></tt> pode deixar de exibir alguns caracteres Symbol/Dingbats apropriadamente em alguns componentes AWT. Para corrigir este problema, use este arquivo <tt><a href="http://java.sun.com/j2se/1.3/font.properties" target="new">font.properties</a></tt> revisado para substituir aquele em <tt><b>&lt;JAVA_HOME>/jre/lib/</b></tt>.</li><br><br>
+
+<li>O <b>Caldera OpenLinux</b> usa a versão 2.1.2-3 de glibc. Como aquela versão não é mais recente ou igual a 2.1.2-11, o instalador rpm do Java 2 SDK vai acusar um erro durante a verificação de dependências. Recomendamos que você obtenha uma versão atualizada da biblioteca glibc disponível a partir de Caldera nos seguintes locais:</li>
+
+<dl>
+	<dd><a href="ftp://ftp.caldera.com/pub/updates/eDesktop/2.4/current/RPMS/" target="new">ftp.caldera.com:/pub/updates/eDesktop/2.4/current/RPMS</a>
+</dl>
+
+</ul>
+
+<br><hr>
+
+<a href name="install"></a>
+<h3>Instruções de instalação</h3>
+<p>O Java&#153; 2 SDK, Standard Edition, v1.3.1 está disponível em dois formatos de instalação. Os dois arquivos estão localizados no diretório <b>software-lin\sj-sdk</b> no nível do diretório-raiz deste CD-ROM.
+
+<ul>
+	<li>Um arquivo binário de auto-extração denominado <b><tt>j2sdk-1_3_1-linux-i386.bin</tt></b> que pode ser usado para instalar o Java 2 SDK em qualquer lugar que você escolher. Se você estiver usando este arquivo, veja <b><a href="#self-extracting">Instalação do código binário de auto-extração</a></b> abaixo.</li><br><br>
+	<li>O arquivo <b><tt>j2sdk-1_3_1-linux-i386-rpm.bin</tt></b>, que contém pacotes RPM que compreendem o Java 2 SDK. Se você estiver usando este pacote, veja <b><a href="#install-pkg">Instalação do arquivo RPM </a></b> abaixo.</li>
+</ul>
+
+<p>Os pacotes para os dois formatos de instalação estão empacotados no script de shell <tt><b>.bin</b></tt> que exibe os contratos de licenciamento dos produtos antes da instalação propriamente dita.
+
+<p>O Java 2 SDK inclui o Java Plug-in. Veja <b><a href="#plugin">Instalação do Java Plug-in</a></b> abaixo.
+
+<br><hr>
+
+<a NAME="self-extracting"></a>
+<h3>Instalação do código binário de auto-extração</h3>
+
+<p>Use estas instruções se você quiser usar o arquivo binário de auto-extração para instalar o Java 2 SDK. Se desejar instalar pacotes RPM que compreendem o SDK, use <a href="#install-pkg">Instalação do arquivo RPM</a> abaixo.
+
+<p>O arquivo binário de auto-extração (<b>j2sdk-1_3_1-linux-i386.bin</b>) para instalar o Java&#153; 2 SDK está localizado no diretório <b>software-lin\sj-sdk</b> no nível do diretório-raiz deste CD-ROM. Copie o arquivo do CD para seu disco rígido com a ferramenta gráfica ou de linha de comando favorita, depois siga as instruções abaixo.
+
+<a NAME="Check"></a>
+<p><b>1. Verifique o tamanho do arquivo baixado.</b>
+
+<dl>
+	<dd>Verifique o grande arquivo que você baixou para se assegurar de que ele tenha o tamanho correto:
+
+	<p><tt><b>j2sdk-1_3_1-linux-i386.bin&nbsp;&nbsp;&nbsp;&nbsp; 26924751 bytes</b></tt>
+
+	<p>Se o tamanho do arquivo não conferir, significa que provavelmente o arquivo foi corrompido durante o download. Neste caso, tente baixar o arquivo novamente.
+</dl>
+
+<a NAME="Directory"></a>
+<p><b>2. Copie <tt>j2sdk-1_3_1-linux-i386.bin</tt> para o diretório no qual você quer instalar o Java 2 SDK.</b>
+
+<a NAME="Directory"></a>
+<p><b>3. Execute <tt>j2sdk-1_3_1-linux-i386.bin</tt></b>
+
+<dl>
+	<dd>Inicie o arquivo de programa que você baixou, <tt>j2sdk-1_3_1-linux-i386.bin</tt>, usando os seguintes comandos, a partir do diretório no qual ele está localizado:
+
+<dl>
+	<dd><tt><b>chmod a+x j2sdk-1_3_1-linux-i386.bin</b></tt>
+	<dd><tt><b>./j2sdk-1_3_1-linux-i386.bin</b></tt>
+</dl>
+
+<p>O script irá exibir um contrato de licenciamento de código, com o qual você deve 
+concordar antes de a instalação continuar. Depois que você concordou com o contrato de
+licenciamento, o script de instalação irá instalar o Java 2 SDK em um diretório
+chamado <tt><b>jdk1.3.1</b></tt> no diretório atual.
+
+<p><b>Nota sobre acesso de root </b> - Desempacotar o software cria automaticamente
+um diretório chamado <tt><b>jdk1.3.1</b></tt>. Observe que, se você optar por instalar
+o Java 2 SDK em um lugar acessível a todo o sistema, como <tt><b>/usr/local</b></tt>,
+você primeiro precisa se tornar root para obter as permissões necessárias. Se você não tiver 
+acesso de root, simplesmente instale o Java 2 SDK em seu diretório home,
+ou em um subdiretório no qual você tenha permissão de gravar.
+
+<p><b>Nota sobre a sobreposição de arquivos </b> - Se você desempacotar o software ou
+a documentação em um diretório que contém um subdiretório chamado <tt><b>jdk1.3.1</b></tt>,
+o novo software irá sobrescrever os arquivos de mesmo nome naquele diretório <tt><b>jdk1.3.1</b></tt>.
+Tenha o cuidado de renomear o diretório antigo se ele contiver arquivos
+que você gostaria de manter.
+
+</dl>
+
+<br><hr>
+
+<a NAME="install-pkg"></a>
+<h3>Instalação do arquivo RPM</h3>
+
+<p>Use estas instruções se quiser instalar o Java 2 SDK na forma
+de pacotes RPM. Se, em vez disso, você quiser usar o arquivo binário de auto-extração,
+veja <a href="#self-extracting">Instalação do código binário de auto extração</a>
+acima.
+
+<p>O arquivo binário de auto-extração (<b>j2sdk-1_3_1-linux-i386-rpm.bin</b>) para instalar o Java&#153; 2 SDK está localizado no diretório <b>software-lin\sj-sdk</b> no nível do diretório-raiz deste CD-ROM. Copie o arquivo do CD para seu disco rígido com a ferramenta gráfica ou de linha de comando favorita, depois siga as instruções abaixo.
+
+<p><b>1. Verifique o tamanho do arquivo baixado.</b>
+
+<dl>
+	<dd>Verifique o grande arquivo que você baixou para se assegurar de que ele tenha o tamanho correto:
+
+	<p><tt><b>j2sdk-1_3_1-linux-i386-rpm.bin&nbsp;&nbsp;&nbsp;&nbsp; 25450562 bytes</b></tt>
+
+	<p>Se o tamanho do arquivo não conferir, significa que provavelmente o arquivo foi corrompido durante o download. Neste caso, tente baixar o arquivo novamente.
+
+</dl>
+
+<a NAME="Directory"></a>
+<p><b>2. Execute o <tt>j2sdk-1_3_1-linux-i386-rpm.bin</tt> e concorde com o contrato que ele exibe.</b>
+
+<dl>
+	<dd>Inicie o arquivo de programa que você baixou, <tt><b>j2sdk-1_3_1-linux-i386-rpm.bin</b></tt>, usando os seguintes comandos, a partir do diretório no qual ele está localizado:
+
+	<dl>
+		<dd><tt><b>chmod a+x j2sdk-1_3_1-linux-i386-rpm.bin</b></tt>
+		<dd><tt><b>./j2sdk-1_3_1-linux-i386-rpm.bin</b></tt>
+	</dl>
+	
+	<p>O script vai exibir um contrato de licenciamento de código, com o qual você deve
+concordar antes de a instalação continuar. Depois que você concordou com o contrato de
+licenciamento, o script de instalação irá criar o arquivo <tt><b>jdk-1.3.1.i386.rpm</b></tt> no diretório atual.
+
+</dl>
+
+<p><b>3. Torne-se root</b>, executando o comando <tt><b>su</b></tt> e digitando a senha do superusuário.
+
+<p><b>4. Execute o comando <tt>rpm</tt></b> para instalar os pacotes:
+
+<dl>
+	<dd><tt><b>rpm -iv jdk-1.3.1.i386.rpm</b></tt>
+	<p>Isto vai instalar os pacotes que compreendem o Java 2 SDK.
+</dl>
+
+
+<p><b>5. Saia do shell de root.</b>
+
+<br><hr>
+
+<a NAME="plugin"></a>
+<h3>Instalação do Java Plug-in</h3>
+
+<p>Para instalar o Java Plug-in, siga as seguintes instruções.
+
+<p><b>1. Desinstale a versão anterior do Java Plug-in, se for o caso.</b>
+<dl>
+	<dd><tt><b>rm -fr $HOME/.netscape/java</b></tt>
+	<dd><tt><b>rm $HOME/.netscape/plugins/javaplugin.so</b></tt>
+</dl>
+
+<p><b>2. Configure a variável de ambiente <tt><b>NPX_PLUGIN_PATH</b></tt> </b> para o diretório que contém o arquivo <tt><b>javaplugin.so</b></tt>. Este arquivo está localizado dentro do Java 2 SDK, no diretório <tt><b>jre/plugin/i386/ns4/</b></tt>.
+
+<p><b>3. Para navegadores Netscape 6: crie um link simbólico no diretório de plugins do Netscape</b>
+
+<dl>
+	<dd>Se (e somente se) você estiver usando o Netscape 6, você precisará 
+criar, no diretório <tt><b>plugins</b></tt> do Netscape, um link simbólico para o 
+caminho do arquivo <tt><b>libjavaplugin_oji.so</b></tt>. Este arquivo está localizado dentro
+do Java 2 SDK, no endereço <tt><b>jre/plugin/i386/ns600/libjavaplugin_oji.so</b></tt>.
+
+	<dl>
+		<dd><tt><b>cd ${NETSCAPE6}/plugins</b></tt>
+		<dd><tt><b>ln -s ${JRE}/plugin/i386/ns600/libjavaplugin_oji.so .</b></tt>
+	</dl>
+
+</dl>
+
+<p><b>4. Para todos os navegadores Netscape: inicie o navegador Netscape </b> ou reinicie-o se ele já estiver sendo executado.
+
+<p><b>5. Para todos os navegadores Netscape: reinicie o navegador uma segunda vez.</b>
+
+<dl>
+	<dd>É necessário reiniciar o navegador uma segunda vez devido ao
+problema <a href="lin_inst-j2se-bug.htm" target="new">4358142</a>.
+</dl>
+
+<!--BODYCOPY End-->
+
+<br><hr>
+
+<h3>Informações adicionais sobre o Java&#153; 2 SDK</h3>
+
+<dl>
+	<dt>Para obter as informações mais recentes sobre o Java&#153; 2 SDK, visite... 
+		<dd><a href="http://java.sun.com/j2se/" target="new">http://java.sun.com/j2se/</a>
+</dl>
+
+<hr WIDTH="100%">
+
+<p align="center"><font size="-1"><a href="lin_install-main.htm">Voltar para Instalação do Software</a></font></p>
+
+<p>
+
+</body>
+</html>

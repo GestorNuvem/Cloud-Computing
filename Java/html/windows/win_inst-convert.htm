@@ -1,0 +1,323 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Java&#153; Plug-in HTML Converter - Informações de instalação</title>
+   <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body text="#000000" bgcolor="#FCF0BC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h1>Java&#153; Plug-in HTML Converter<br><font size="+1">para instalação no Windows</font></h1>
+
+<p>Leia a documentação a seguir para instalar o Java&#153; Plug-in HTML Converter a partir do CD.
+
+<p>Você leu o <a href="la-conv.htm">contrato de licenciamento</a> do Java&#153; Plug-in HTML Converter?
+
+<hr>
+
+<!--BODYCOPY Start-->
+
+<p>O Java&#153; Plug-in HTML Converter converte um arquivo que contém applets para um formato que usa o Java&#153; Plug-in. Para usar o HTML Converter, siga as instruções abaixo.
+
+<h3>Começando a usar o HTML Converter</h3>
+
+<p>Inicie o Converter
+
+<ol type="1" start="1.">
+	<li>Copie o diretório <b>converter</b> deste CD, que está localizado no diretório <b>software-win</b> no nível do diretório-raiz deste CD-ROM, para seu disco rígido.<br><br>
+	<li>Em um prompt do MS-DOS, use CD para mudar para o diretório para o qual você moveu o diretório <b>converter</b>.<br><br>
+	<li>Use CD para mudar para o diretório <b>converter\classes</b>.<br><br>
+	<li>Inicie o HTML Converter com este comando:<br><br>
+	<dd><tt><b>java -classpath . HTMLConverter</b></tt>
+</ol>
+
+<br><hr>
+
+<h3>Usando o Graphical HTML Converter</h3>
+<p>1. Inicie o HTML Converter
+<dl>
+	<dd>Inicie a interface gráfica com um dos métodos acima. Para obter instruções sobre como usar o HTML Converter diretamente a partir da linha de comando, consulte "Usando a linha de comando para executar o Converter".
+</dl>
+
+<p>2. Selecione os arquivos a converter
+
+<dl>
+	<dd>Escolha "Browse..." para selecionar a pasta em uma caixa de diálogo. Depois de selecionar uma pasta, você pode escolher os arquivos específicos a serem convertidos, especificando padrões de procura na caixa "Matching File Names". Você pode usar um * como coringa. Cada padrão deve ser separado por uma vírgula.<br><br>
+	<dd>Exemplo: Digitar *.html,*.htm vai fazer com que todos os arquivos que terminam com .html e .htm sejam convertidos.<br><br>
+	<dd>Para converter todos os arquivos correspondentes em subdiretórios aninhados, selecione "Include Subfolders".
+</dl>
+
+<p>3. Escolha uma pasta para cópia de segurança
+
+<dl>
+	<dd>A pasta para cópia de segurança default tem o mesmo nome que a pasta que contém os documentos originais, com _BAK acrescentado a ele.<br><br>
+	<dd>Exemplo: se o caminho para o documento original for C:\html\applet.html, a pasta de cópia de segurança é C:\html_BAK.<br><br>
+	<dd>Se você quiser selecionar uma pasta diferente para a cópia de segurança, digite o novo caminho na caixa "Backup Files to Folder" ou escolha "Browse..." para selecionar a nova pasta a partir de uma caixa de diálogo.
+</dl>
+
+<p>4. Gere um arquivo de log 
+
+<dl>
+	<dd>O arquivo de log do HTML Converter contém informações básicas relacionadas ao processo de conversão, incluindo a data de conversão, o número de arquivos processados e o número de applets encontrados.<br><br>
+	<dd>Se você desejar que seja gerado um arquivo de log, selecione "Generate Log File" da janela Edit -&gt; Options. Digite o caminho na caixa "Specify Location for Log File" ou escolha "Browse..." para escolher uma pasta.
+</dl>
+
+<p>5. Escolha um gabarito de conversão
+
+<dl>
+	<dd>O arquivo de gabarito determina como o HTML de seu arquivo é alterado para usar o Java Plug-in. Se nenhum gabarito for escolhido, será usado um gabarito default. O gabarito default irá produzir arquivos HTML convertidos que funcionarão com o IE e o Netscape.<br><br>
+	<dd>Se você quer usar um gabarito diferente, selecione-o do menu escamoteável rotulado com "Template File". Se você escolher "Other Template", você pode escolher um arquivo personalizado que será usado como gabarito. Este arquivo deve ser um gabarito.
+</dl>
+
+<p>6. Converta os documentos
+
+<dl>
+	<dd>Clique no botão "Convert..." para iniciar o processo de conversão. Uma caixa de diálogo vai mostrar o arquivo que está sendo processado, o número de arquivos processados, o número de applets encontrados e o número de erros encontrados.
+</dl>
+
+<p>7. Saindo do HTML Converter
+
+<dl>
+	<dd>Quando a conversão estiver completa, o botão na caixa de diálogo irá mudar de "Cancel" para "Done". Clique em "Done" para fechar a caixa de diálogo.<br><br>
+	<dd>Selecione "Exit" do menu "File" para fechar o Java&#153; Plug-in HTML Converter ou repita as etapas acima para escolher um outro conjunto de arquivos para converter.
+</dl>
+
+<br><hr>
+
+<h3>Usando a linha de comando para executar o Converter</h3>
+<p>O HTML Converter agora tem suporte para uma interface de linha de comando.
+
+<p>java -classpath . HTMLConverter [ filespecs ] [-simulate]
+<br>[-options1 value1 [-option2 value2 [...]]]
+
+<dl>
+	<dt>filespecs
+<dd>Lista de especificações de arquivo e coringas (*) delimitados por espaços. (*.html *.htm)
+</dl>
+
+<dl>
+	<dt>options
+	<br>source
+		<dd>Caminho para os arquivos originais (c:\htmldocs). Default: &lt;userdir&gt;
+<br>Se o caminho for relativo, considera-se relativo ao diretório no qual o HTMLConverter foi iniciado.
+</dl>
+
+<dl>
+	<dt>backup
+		<dd>Caminho para gravar arquivos de segurança. Default: &lt;userdir>/&lt;source>_bak
+<br>Se o caminho for relativo, considera-se relativo ao diretório no qual o HTMLConverter foi iniciado.
+</dl>
+
+<dl>
+	<dt>subdirs
+		<dd>Opção para processar arquivos em subdiretórios. Default: FALSE
+</dl>
+
+<dl>
+	<dt>template
+		<dd>Nome do arquivo de gabarito. Default: default.tpl
+<br>default.tpl é padrão (IE e Navigator) somente para Windows e Solaris.
+<br>Use o default se você não tiver certeza.
+</dl>
+
+<dl>
+	<dt>log
+		<dd>Caminho e nome do arquivo de log. Default: &lt;userdir>/convert.log
+</dl>
+
+<dl>
+	<dt>progress
+		<dd>Exibe o progresso na saída-padrão ao converter. Default: true
+</dl>
+
+<dl>
+	<dt>simulate
+		<dd>Exibe dados específicos da conversão, sem converter.
+<br>Você receberá uma lista detalhada de informações específicas sobre a conversão. Use esta opção se você estiver inseguro.
+</dl>
+
+<p>Se apenas Java HTMLConverter for digitado na linha de comando (sem especificações de arquivos ou opções), a interface gráfica do Converter será iniciada.
+
+<br><hr>
+
+<a name="templates"></a>
+<h3>Gabaritos</h3>
+<p>O arquivo de gabarito determina como os applets convertidos são codificados na página HTML. O gabarito é um simples arquivo de texto que contém marcas que representam as partes do applet original. Adicionando, removendo ou rearranjando as marcas em um arquivo de gabarito, você pode alterar a saída do arquivo convertido.
+
+
+<p><b>Marcas suportadas:</b>
+
+<dl>
+	<dt>$OriginalApplet$
+		<dd>Esta marca é usada para substituir o texto completo do applet original.
+</dl>
+
+<dl>
+	<dt>$AppletAttributes$
+		<dd>Esta marca é usada para substituir todos os atributos do applet (code, codebase, width, height, etc.).
+</dl>
+
+<dl>
+	<dt>$ObjectAttributes$
+		<dd>Esta marca é usada para substituir todos os atributos exigidos pela marca object.
+</dl>
+
+<dl>
+	<dt>$EmbedAttributes$
+		<dd>Esta marca é usada para substituir todos os atributos exigidos pela marca embed.
+</dl>
+
+<dl>
+	<dt>$AppletParams$
+		<dd>Esta marca é usada para substituir todas as marcas &lt;param ...> do applet.
+</dl>
+
+<dl>
+	<dt>$ObjectParams$
+		<dd>Esta marca é usada para substituir todas as marcas &lt;param...> exigidas pela marca object.
+</dl>
+
+<dl>
+	<dt>$EmbedParams$
+		<dd>Esta marca é usada para substituir todas as marcas &lt;param...> exigidas pela marca embed no formato NOME=VALOR.
+</dl>
+
+<dl>
+	<dt>$AlternateHTML$
+		<dd>Esta marca é usada para substituir o texto na área de "No support for applets" do applet original.
+</dl>
+
+<dl>
+	<dt>$CabFileLocation$
+		<dd>Este é o URL do arquivo compactado que deve ser usado em cada gabarito voltado para o IE.
+</dl>
+
+<dl>
+	<dt>$NSFileLocation$
+		<dd>Este é o URL do plugin do Netscape que deve ser usado em cada gabarito voltado para Netscape.
+</dl>
+
+<p><b>default.tpl</b>
+<br>Este é o gabarito default para o Converter. Pode-se usar a página convertida no IE e no Navigator, no Windows 95 ou Windows NT, para invocar o Java&#153; Plug-in.
+
+<tt><b><dl><dd>
+<p>&lt;OBJECT
+<br>&nbsp; classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+<br>$ObjectAttributes$ codebase="$CabFileLocation$"&gt;
+<br>$ObjectParams$
+<br>&lt;PARAM NAME="type"
+<br>&nbsp; &nbsp; &nbsp; &nbsp; VALUE="application/x-java-applet;version=1.3"&gt;
+<br>$AppletParams$&lt;COMMENT>
+<br>&lt;EMBED type="application/x-java-applet;version=1.3"
+<br>&nbsp; &nbsp; &nbsp; &nbsp; $EmbedAttributes$
+<br>$EmbedParams$ pluginspage="$NSFileLocation$"&gt;
+<br>&lt;NOEMBED>&lt;/COMMENT&gt;
+<br>$AlternateHTML$
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/NOEMBED>&lt;/EMBED&gt;
+<br>&lt;/OBJECT&gt;
+</dl></b></tt>
+
+<p><b>ieonly.tpl</b>
+<br>As páginas convertidas com este gabarito podem ser usadas para invocar o Java&#153; Plug-in somente no IE, no Windows 95 ou Windows NT.
+
+<tt><b><dl><dd>
+<p>&lt;OBJECT
+<br>&nbsp; classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+<br>$ObjectAttributes$ codebase="$CabFileLocation$"&gt;
+<br>$ObjectParams$
+<br>&lt;PARAM NAME="type"
+<br>&nbsp; &nbsp; &nbsp; &nbsp; VALUE="application/x-java-applet;version=1.3"&gt;
+<br>$AppletParams$
+<br>$AlternateHTML$
+<br>&lt;/OBJECT&gt;
+</dl></b></tt>
+
+<p><b>nsonly.tpl</b>
+<br>As páginas convertidas com este gabarito podem ser usadas para invocar o Java&#153; Plug-in somente no Navigator, no Windows 95 ou Windows NT.
+
+<tt><b><dl><dd>
+<p>&lt;EMBED type="application/x-java-applet;version=1.3"
+<br>&nbsp; &nbsp; &nbsp; $EmbedAttributes$
+<br>$EmbedParams$ pluginspage="$NSFileLocation$">&lt;NOEMBED>
+<br>$AlternateHTML$
+<br>&lt;/NOEMBED>&lt;/EMBED>
+</dl></b></tt>
+
+<p><b>extend.tpl</b>
+<br>As´páginas convertidas com este gabarito podem ser usadas em qualquer navegador ou plataforma. Se o navegador for o IE ou o Navigator, no Windows 95 ou Windows NT, o Java&#153; Plug-in será invocado. Caso contrário, utiliza-se a MVJ (máquina virtual Java) default do navegador.
+
+<tt><b><dl><dd>
+<p>&lt;SCRIPT LANGUAGE="JavaScript">&lt;!--
+<br>&nbsp; &nbsp; var _info = navigator.userAgent; var _ns = false;
+<br>&nbsp; &nbsp; var _ie = (_info.indexOf("MSIE") > 0
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;&amp; _info.indexOf("Win") > 0 &amp;&amp;
+<br>_info.indexOf("Windows 3.1") &lt; 0);
+<br>//-->&lt;/SCRIPT>
+<br>&lt;COMMENT>&lt;SCRIPT LANGUAGE="JavaScript1.1">&lt;!--
+<br>&nbsp; &nbsp; var _ns = (navigator.appName.indexOf("Netscape") >= 0 &amp;&amp;
+<br>((_info.indexOf("Win") > 0 &amp;&amp; _info.indexOf("Win16") &lt; 0 &amp;&amp;
+<br>java.lang.System.getProperty("os.version").indexOf("3.5")
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt; 0) ||
+<br>_info.indexOf("Sun") > 0));
+<br>//-->&lt;/SCRIPT>&lt;/COMMENT></b></tt>
+
+
+<tt><b><p>&lt;SCRIPT LANGUAGE="JavaScript">&lt;!--
+<br>&nbsp; &nbsp; if (_ie == true) document.writeln('&lt;OBJECT
+<br>classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+<br>&nbsp; &nbsp; &nbsp; $ObjectAttributes$
+<br>codebase="$CabFileLocation$">&lt;NOEMBED>&lt;XMP>');
+<br>&nbsp; &nbsp; else if (_ns == true) document.writeln('&lt;EMBED
+<br>type="application/x-java-applet;version=1.3"
+<br>&nbsp; &nbsp; &nbsp; $EmbedAttributes$
+<br>$EmbedParams$ pluginspage="$NSFileLocation$">
+<br>&nbsp; &nbsp; &nbsp; &lt;NOEMBED>&lt;XMP>');
+<br>//-->&lt;/SCRIPT>
+<br>&lt;APPLET $AppletAttributes$>&lt;/XMP>
+<br>$ObjectParams$
+<br>&lt;PARAM NAME="type"
+<br>&nbsp; &nbsp; &nbsp; VALUE="application/x-java-applet;version=1.3">
+<br>$AppletParams$
+<br>&lt;/APPLET>
+<br>$AlternateHTML$
+<br>&lt;/NOEMBED>&lt;/EMBED>&lt;/OBJECT>
+</dl></b></tt>
+
+<br><hr>
+
+<h3>Usando o HTML Converter em outras plataformas</h3>
+<p>Se você quiser executar o Converter em uma plataforma diferente do Solaris, do Microsoft Windows ou do Linux, você precisará usar o instalador Pure Java. Uma vez feita a instalação, mude de diretório para a pasta de instalação e configure classpath para
+
+<dl>
+	<dd>./:./HTMLConverter.jar:./templates
+</dl>
+
+<p>Nota: .'s e /'s são específicos para UNIX. Utilize os separadores de caminho e o arquivo apropriados para sua plataforma. Depois, inicie o HTML Converter invocando a classe principal, HTMLConverter.
+
+
+<p><b>Como funciona o HTML Converter</b>
+<p>O código HTML que não faz parte de um applet é transferido do arquivo original para um arquivo temporário. Quando uma marca &lt;APPLET> é encontrada, o Converter analisa o applet até a primeira marca &lt;/APPLET> e intercala os dados do applet com o gabarito. Isso é anexado ao arquivo temporário. Para obter mais informações sobre gabaritos, veja <a href="#templates">Gabaritos</a>.
+
+<p>Se isto terminar sem erros, o arquivo HTML original é movido para a pasta de cópia de segurança e o arquivo temporário (convertido) é renomeado com o nome do arquivo original. Seus arquivos originais nunca são removidos do disco.
+
+<p>Observe que o Converter efetivamente converte os arquivos no lugar em que estão. Depois que você executou o Converter, seus arquivos estão prontos para usar o Java&#153; Plug-in.
+
+<br><hr>
+
+<dl>
+	<dt>Para obter as informações mais recentes sobre o Java&#153; Plug-in HTML Converter, visite... 
+		<dd><a href="http://java.sun.com/products/plugin/" target="new">http://java.sun.com/products/plugin/</a>
+</dl>
+
+<!--BODYCOPY End-->
+
+<hr WIDTH="100%">
+
+<p align="center"><font size="-1"><a href="win_install-main.htm">Voltar para Instalação do Software</a></font></p>
+
+<p>
+
+</body>
+</html>

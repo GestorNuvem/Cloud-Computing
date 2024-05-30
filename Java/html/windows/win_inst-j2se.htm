@@ -1,0 +1,517 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Java&#153; 2 SDK, Standard Edition v 1.3.1 - Informações de instalação</title>
+   <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body text="#000000" bgcolor="#FCF0BC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h1>Java&#153; 2 SDK, <br><font size="+2">Standard Edition v 1.3.1</font><br><font size="+1">instalação para Windows</font></h1>
+
+<p>Leia a documentação a seguir antes de você <a href="#install">instalar</a> o Java&#153; 2 SDK a partir do CD.
+
+<p>Você leu o <a href="la-j2se.htm">contrato de licenciamento</a> do Java&#153; 2 SDK ?
+
+<p align="center">
+<a href="#requirements">Requisitos de sistema</a> |
+<a href="#install_txt">Instruções de instalação</a> |
+<a href="#troubleshooting">Investigando problemas</a>
+
+<hr>
+
+<!--BODYCOPY Start-->
+
+<a NAME="requirements"></a><h3>Requisitos de sistema</h3>
+<p>O Java<sup><font size=-2>TM</font></sup> 2 SDK destina-se ao uso 
+com os sistemas operacionais Windows 95, Windows 98 (1a ou 2a edição), Windows NT 4.0 com o Service
+Pack 5, Windows ME, Windows 2000 Professional, Windows 2000 Server ou
+Windows 2000 Advanced Server, sendo executados em hardware Intel.
+Somente a edição Professional do Windows 2000 é suportada com "locales" diferentes de "English".
+
+<p>É necessário um processador Pentium 166MHz ou mais rápido, com pelo menos 32 megabytes de 
+RAM física, para executar os aplicativos baseados em gráficos. Recomendam-se 48 megabytes
+de RAM para os applets executados dentro de um navegador que usa o produto Java
+Plug-in. Executar com menos memória pode provocar "swapping" de disco, o que tem um
+grave efeito sobre o desempenho. Programas muito grandes podem exigir mais
+RAM para desempenho adequado.
+
+<p>Você deve ter 70 megabytes de espaço livre em disco antes de tentar
+instalar o software do Java 2 SDK. Se também quiser instalar o pacote de documentação
+que pode ser baixado da Internet, você precisará de um espaço livre adicional de 120 megabytes em disco.
+
+<br><hr>
+
+<a NAME="install_txt"></a><h3>Instruções de instalação</h3>
+<p>Neste procedimento, você irá executar o programa de auto-instalação para desempacotar
+e instalar o pacote de software Java 2 SDK. 
+
+<p><b>Nota:</b> Depois de instalar o software Java, ele pedirá que você 
+reinicie o sistema, o que completa as modificações do registro de que você irá 
+precisar se quiser desinstalar este produto mais tarde.
+Para continuar a usar estas instruções depois de reiniciar o sistema,
+imprima-as agora ou use a função de histórico de seu navegador da Web 
+para retornar a esta página.
+
+<p>O procedimento de instalação tem as seguintes etapas:
+
+<ol>
+	<li><a href="#Check">Verifique o tamanho do arquivo de download</a></li>
+	<li><a href="#Run">Execute o programa de instalação do Java 2 SDK</a></li>
+	<li><a href="#Delete">Remova o(s) arquivo(s) baixado(s)</a> (Opcional)</li>
+	<li><a href="#Environment">Atualize a variável PATH</a></li>
+	<li><a href="#Classpath">Verifique a variável CLASSPATH</a></li>
+	<li><a href="#Running">Comece a usar as ferramentas do SDK!</a></li>
+	<li><a href="#uninstall">Desinstalando o Java 2 SDK</a></li>
+</ol>
+
+<!-- ALL LINKS TO SDK DOCS (SUCH AS THE FOLLOWING) NEED TO START WITH "http://java.sun.com/..." SO LINK WILL WORK EVEN IF USER DOWNLOADS THIS PAGE, AND ALSO SO IT WILL WORK FROM FINAL DOWNLOAD PAGE where the installation instructions are shown below the FTP/HTTP download buttons: http://java.sun.com/cgi-bin/download2.cgi#install -->
+
+<p>Se você tiver quaisquer dificuldades, veja a seção <a href="#troubleshooting">Investigando problemas</a>
+no fim deste documento ou use este link para <a href="http://java.sun.com/cgi-bin/feedback.pl" target="new">relatar
+um problema de instalação</a>.
+
+<a NAME="Check"></a>
+<p><b>1. Verifique o tamanho do arquivo de download</b>
+
+<dl>
+	<dd>Se você salvou o programa de auto instalação em disco sem tê-lo executado a 
+partir da página de download do site de Java Software na Web, verifique o tamanho para 
+ver se você tem o arquivo completo:<br><br>
+
+	<dd><b><tt>j2sdk-1_3_1-win.exe &nbsp;&nbsp;&nbsp;&nbsp; 34440521 bytes</tt></b><br><br>
+
+	<dd>O arquivo fornecido neste CD também deve ter 34440521 bytes.
+</dl>
+
+<a NAME="Run"></a>
+<p><b>2. Execute o programa de instalação do Java 2 SDK</b>
+
+<dl>
+	<dd>O arquivo <tt><b>j2sdk-1_3_1-win.exe</b></tt> é o programa de instalação do Java 2 SDK. 
+	Clique duas vezes no ícone do programa de instalação. Depois, siga as instruções que o programa de instalação fornecer.
+Quando tiver terminado a instalação, você pode remover o arquivo de
+download para recuperar espaço em disco.
+</dl>
+
+<dl>
+	<dd><b>Árvore de diretórios instalados</b>
+<br>O Java 2 SDK tem a estrutura de diretórios mostrada abaixo.
+</dl>
+
+<blockquote>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jdk1.3.1
+&nbsp; ____________________|___________________
+&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |
+&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; bin lib |&nbsp;&nbsp;&nbsp; |&nbsp; demo&nbsp; |
+&nbsp;|&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | LICENSE |&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jre
+&nbsp;|&nbsp;&nbsp;&nbsp; | COPYRIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __|__
+&nbsp;|&nbsp; README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | include&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |
+README.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include-old&nbsp;&nbsp;&nbsp;&nbsp; bin&nbsp;&nbsp; lib
+</pre>
+</blockquote>
+
+<a NAME="Delete"></a>
+<p><b>3. Remova o(s) arquivo(s) baixado(s)</b> (Opcional)
+<dl>
+
+	<dd>Você não precisará fazer isto se você <a href="#install">instalou</a> o software diretamente a partir do CD.
+	<dd>Se quiser recuperar espaço em disco, remova o arquivo (ou arquivos) que você baixou originalmente.<br><br>
+	<dd>Você só precisará fazer isto se tiver copiado o arquivo <tt><b>j2sdk-1_3_1-win.exe</b></tt> para seu disco rígido.
+</dl>
+
+<a NAME="Environment"></a><a NAME="path"></a>
+<p><b>4. Atualize a variável PATH</b>
+
+<dl>
+	<dd>Você pode executar o Java 2 SDK sem configurar a variável PATH, ou, como opção, pode configurá-la como uma conveniência.<br><br>
+	<dd><b>Devo configurar a variável PATH?</b>
+<br>Configure a variável PATH se você quiser executar de forma conveniente
+os programas do Java 2 SDK (<tt>javac.exe</tt>, <tt>java.exe</tt>, <tt>javadoc.exe</tt>,
+etc.) a partir de qualquer diretório sem ter que digitar o caminho completo do comando.
+Caso não configure a variável PATH, você precisa especificar o caminho completo
+para o programa cada vez que você o executa, como em:
+
+	<dl>
+		<dd><tt>C:> <b>\jdk1.3.1\bin\javac MyClass.java</b></tt>
+	</dl>
+
+<p>É útil configurar a variável PATH permanentemente de modo que ela permaneça configurada após a reinicialização do sistema.
+
+<p><a NAME="path-permanent"></a><b>Como eu configuro a variável PATH permanentemente ?</b>
+<br>Para configurar o PATH permanentemente, adicione o caminho completo do diretório <b>jdk1.3.1\bin</b>
+à variável PATH. Normalmente, este caminho completo é algo parecido com
+<tt><b>C:\jdk1.3.1\bin</b></tt>. Configure PATH da seguinte forma, dependendo de se você está no
+Windows NT ou no Windows 95/98/2000/ME.
+
+<p><b>Windows NT e Windows 2000</b> - Para configurar a PATH permanentemente:
+<ol type=a>
+	<li>Escolha Configurações, Painel de Controle e selecione Sistema. No Windows NT, selecione
+a aba Ambiente; no Windows 2000 selecione a aba Avançadas. Procure 
+"Path" nas Variáveis de Ambiente e Variáveis do Sistema. Se você não tiver certeza de onde
+adicionar o caminho, adicione-o na extremidade direita de "Path" em Variáveis do Usuário.
+Um valor típico para PATH é:</li>
+
+	<dl>
+		<dd><tt><b>C:\jdk1.3.1\bin</b></tt>
+	</dl>
+
+<p>O uso de maiúsculas ou minúsculas é indiferente. Clique em "Configurar", "OK" ou "Aplicar".
+
+<p>O PATH pode ser uma série de diretórios separados por ponto-e-vírgulas (;).
+O Microsoft Windows procura os programas nos diretórios de PATH na ordem, 
+da esquerda para a direita. Você deve ter somente um diretório <tt><b>bin</b></tt> para um
+Java SDK no caminho de cada vez (aqueles que seguem o primeiro são ignorados),
+de modo que, se algum já estiver presente, você pode atualizá-lo para jdk1.3.1.
+
+	<li>O novo caminho surte efeito em cada nova janela de linha de comando que você abre após configurar a variável PATH.</li>
+
+</ol>
+
+<p><b>Windows 98, Windows 95</b> - Para configurar PATH permanentemente, abra o arquivo AUTOEXEC.BAT e adicione ou altere o comando PATH da seguinte maneira:
+<ol type=a>
+	<li>
+	Inicie o editor do sistema. Escolha "Iniciar", "Executar" e digite <tt><b>sysedit</b></tt>,
+e depois clique em <b>OK</b>. O editor do sistema inicia abrindo diversas janelas. 
+Vá para a janela que está exibindo AUTOEXEC.BAT.<br><br></li>
+
+	<li>
+	Procure o comando PATH (se não houver, adicione um). Se você não
+tiver certeza sobre onde adicionar o caminho, adicione-o à extremidade direita de PATH. Por
+exemplo, no comando PATH a seguir, adicionamos o diretório <tt><b>bin</b></tt>
+na extremidade direita:</li>
+
+<dl>
+	<dd><tt>PATH C:\WINDOWS;C:\WINDOWS\COMMAND<b>;C:\JDK1.3.1\BIN</b></tt>
+</dl>
+
+<p>Letras maiúsculas ou minúsculas são indiferentes. O PATH pode ser uma série de diretórios separados por ponto-e-vírgulas (;).
+O Microsoft Windows procura os programas nos diretórios de PATH na ordem, 
+da esquerda para a direita. Você deve ter somente um diretório <tt><b>bin</b></tt> para um
+Java SDK no caminho de cada vez (aqueles que seguem o primeiro são ignorados),
+de modo que, se algum já estiver presente, você pode atualizá-lo para jdk1.3.1.<br><br>
+
+<li>
+Para fazer o caminho surtir efeito na janela de linha de comando atual, execute
+o seguinte:</li>
+
+<dl>
+	<dd><tt>C:> <b>c:\autoexec.bat</b></tt>
+</dl>
+
+<p>Para descobrir qual o valor atual de seu PATH, para ver se ele surtiu efeito, digite o seguinte no prompt de comando:
+
+<dl>
+	<dd><tt>C:> <b>path</b></tt>
+</dl>
+
+</ol>
+
+<p><b>Windows ME</b> - Para configurar PATH permanentemente:
+
+<p>A partir do menu Iniciar, escolha Programas, Acessórios, Ferramentas do sistema
+e Informações do sistema. Isto abrirá uma janela com o título "Microsoft Help
+and Support". A partir daqui, escolha o menu de ferramentas, depois selecione o utilitário 
+de configuração do sistema. Clique na aba ambiente, selecione PATH e pressione
+o botão de editar. Agora adicione o SDK a seu caminho como descrito na etapa b acima.
+Depois que você adicionou a localização do SDK a seu PATH, salve as alterações
+e reinicie sua máquina quando for solicitado.
+
+</dl>
+
+
+<a NAME="Classpath"></a>
+<p><b>5. Verifique a variável CLASSPATH</b>
+<dl>
+	<dd>A variável CLASSPATH é uma maneira de dizer aos aplicativos escritos na linguagem de programação
+Java (incluindo os utilitários do Java 2 SDK) onde procurar
+as classes do usuário (as classes que você desenvolve). (A opção de linha de comando <tt><b>-classpath</b></tt>
+é a maneira preferida.) Se sua máquina não tiver a variável
+CLASSPATH configurada, você pode ignorar o resto desta etapa. Para verificar isto, 
+execute o comando <tt><b>set</b></tt> a partir do prompt do DOS:
+
+<dl>
+	<dd><tt>C:> <b>set</b></tt>
+</dl>
+
+<p>Se CLASSPATH não aparecer na lista de configurações, ela não está configurada. Se
+sua variável CLASSPATH já estiver configurada para algum valor, você pode querer limpar
+suas configurações de CLASSPATH, portanto, continue lendo.
+
+<p><b>Devo modificar a variável CLASSPATH?</b>
+<br>O Java 2 SDK funcionará bem mesmo se CLASSPATH estiver configurada para uma versão
+anterior do software do SDK, desde que ele contenha o diretório atual
+"<tt><b>.</b></tt>". Entretanto, se sua CLASSPATH contiver <tt><b>classes.zip</b></tt>
+(que existia apenas no JDK 1.0.x e no JDK 1.1.x) e você não pretende continuar
+usando estas versões mais antigas, você pode remover aquela configuração da CLASSPATH
+agora. Em qualquer caso, se CLASSPATH estiver configurada, ela deve incluir o diretório atual
+-- isto torna possível compilar e depois executar as classes no diretório atual.
+
+<p><b>Como eu modifico a CLASSPATH?</b>
+<br>Use o mesmo procedimento que você usou para a variável PATH na etapa anterior e:
+
+<ol type="a">
+<li>Remova a variável de ambiente CLASSPATH inteiramente.</li>
+
+<p>Com o Java 2 SDK, o valor default é "<tt>.</tt>", o diretório atual.
+Para incluir quaisquer classes do usuário, use em vez dele a opção de linha de comando <tt>-classpath</tt> 
+com <tt>java</tt>, <tt>javac</tt>, <tt>javadoc</tt> e outras ferramentas. 
+Esta é a abordagem recomendada, porque ela não força uma CLASSPATH
+para todos os aplicativos.
+
+<br><br>-OU-
+
+<li>
+Se você tiver aplicativos que exigem que a CLASSPATH seja configurada, mantenha essas classes de
+usuário exigidas em CLASSPATH e inclua o diretório atual "<tt>.</tt>".
+Se você não estiver mais usando o JDK 1.1.x, remova <tt>classes.zip</tt>.</li>
+
+</ol>
+
+<p>Para obter mais informações, consulte o endereço <a href="http://java.sun.com/products/jdk/1.3/docs/tooldocs/win32/classpath.html" target="new">Setting the class path (Sun)</a>.</blockquote>
+
+</dl>
+
+<a NAME="Running"></a>
+<p><b>6. Comece a usar as ferramentas do SDK!</b>
+<dl>
+<dd>Seu sistema de computador agora deve estar pronto para usar o Java 2
+SDK. Nesta etapa, você executará alguns comandos simples para se assegurar 
+de que está funcionando apropriadamente.
+
+<p>Se você estiver apenas iniciando o desenvolvimento e a execução de programas na linguagem de programação
+Java, consulte o endereço <a href="http://java.sun.com/docs/books/tutorial/" target="new">The Java
+Tutorial</a> on-line para obter alguma orientação. Em especial, observe as trilhas do tutorial 
+sob o título <i>Trails Covering the Basics</i>.
+
+<p>Você também pode <a href="http://java.sun.com/j2se/1.3/index.html" target="new">baixar a 
+documentação do Java 2 SDK a partir da página de download do Java 2 SDK.</a>.
+
+</dl>
+
+<p><a NAME="uninstall"></a><b>7. Desinstalando o Java 2 SDK</b>
+<dl>
+	<dd>Se você quiser desinstalar o Java 2 SDK, vá para o
+menu Iniciar e selecione Configurações, depois selecione Painel de Controle. No Painel de
+Controle, abra o utilitário Adicionar ou Remover Programas. Uma lista de softwares que você pode
+desinstalar será apresentada a você. Simplesmente escolha o Java 2 SDK
+da lista e clique no botão "Adicionar ou Remover ...".
+</dl>
+
+
+<!-- ===================== Troubleshooting  ===================== -->
+<br><hr>
+<a NAME="troubleshooting"></a>
+<h3>Investigando problemas na instalação</h3>
+
+<p>Abaixo estão algumas dicas para contornar os problemas que às vezes são vistos
+durante ou após uma instalação. Para obter mais informações sobre a investigação de problemas,
+consulte a <a href="http://java.sun.com/products/jdk/faq.html" target="new">Java FAQ</a>.
+
+<ul type=disc>
+<li><b>Arquivo ActiveX Control "danificado"</b></li>
+
+<p>Quando você instala a versão 1.3.1 do Java Runtime Environment, o arquivo
+ActiveX Control em <tt><b>C:\Winnt\Downloaded Program Files\Java Runtime
+Environment 1.3.1</b></tt> terá um estado "danificado". Esta é meramente uma questão 
+aparente, e o estado "danificado" não deve ter nenhum efeito adverso
+em qualquer situação.
+
+<p>Não obstante, existe uma maneira de contornar o problema se, por alguma razão, você não puder ter
+um estado de "danificado". Vá para "Iniciar -> Executar" e digite "regedit". A partir das janelas do
+regedit, navegue para a chave do registro "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Code
+Store Database\Distribution Units\8AD9C840-044E-11D1-B3E9-00805F499D93\DownloadInformation".
+Dê um duplo clique no string INF e remova o string salientado sob
+"Dados do valor". O arquivo ActiveX Control terá agora um estado de "instalado".
+<br><br>
+<li>
+<b>O programa de instalação diz que você não tem espaço em disco suficiente, embora você tenha
+mais de 4GB de espaço disponível no disco</b>
+
+</li>
+
+<p>Este problema pode ocorrer se o espaço livre em seu disco estiver no intervalo estreito
+[4GB, 4GB + espaço necessário -1]. Para contornar este problema, crie
+um arquivo (ou arquivos) temporário(s) que ocupe(m) espaço em disco suficiente para tornar o 
+espaço disponível menor do que 4GB, depois prossiga com a instalação. Depois que a instalação 
+for completada, você pode remover o(s) arquivo(s) temporário(s).
+<p>Um problema similar pode ocorrer com quantidades maiores de espaço livre em disco.
+Consulte o relatório de problemas <a href="http://developer.java.sun.com/developer/bugParade/bugs/4406594.html" target="new">4406594</a>.<br><br>
+
+<li><b>Se você ver a seguinte mensagem de erro no Windows 2000</b></li>
+
+<dl>
+	<dd><tt><b>config.nt.</b></tt> The system file is not suitable for running MS-DOS and Microsoft Windows Applications.
+</dl>
+
+<p>ela indica um problema com o arquivo %SystemRoot%\System32\COMMAND.COM 
+que foi encontrado em algumas instalações do Windows 2000. Se você encontrar 
+esta mensagem de erro ao tentar iniciar o programa de instalação, consulte
+o site da Microsoft na Web no endereço
+
+<dl>
+<dd><tt><b><a href="http://support.microsoft.com/support/kb/articles/Q142/2/71.asp" target="new">http://support.microsoft.com/support/kb/articles/Q142/2/71.asp</a></b></tt> 
+<br> para obter informações sobre como resolver o problema.
+</dl>
+<br>
+<li><b>Se você ver a seguinte mensagem de erro</b></li>
+
+<dl>
+	<dd><tt><b>corrupt cabinet file</b></tt>
+</dl>
+
+<p>o arquivo que você baixou está corrompido. (O  "cabinet file" contém
+arquivos de aplicativo comprimidos, dados, recursos e DLL). Verifique seu tamanho
+de arquivo, comparando-o com o tamanho de arquivo esperado, listado nestas instruções.
+Se eles não forem iguais, tente baixar o pacote novamente.
+
+<br><br>
+<li><b>Se você ver a seguinte mensagem de erro</b></li>
+
+<dl>
+	<dd><tt><b>net.socketException: errno = 10047</b></tt>
+
+	<p>-ou-
+	
+	<dd><tt><b>Unsupported version of Windows Socket API</b></tt>
+</dl>
+
+<p>verifique quais são os drivers de TCP/IP que você instalou. O AppletViewer suporta
+somente os drivers de TCP/IP da Microsoft incluídos com o Windows 95. Se estiver 
+usando drivers de terceiros (p.ex., Trumpet Winsock), você irá precisar mudar
+de volta para os drivers de TCP/IP nativos da Microsoft se desejar carregar os applets
+através da rede.<br><br>
+
+<li><b>Se você ver a seguinte mensagem de erro</b></li>
+
+<dl>
+	<dd><tt><b>System Error during Decompression</b></tt>
+</dl>
+
+<p>você pode não ter espaço suficiente no disco que contém seu diretório TEMP.
+<br><br>
+
+<li><b>Se você ver a seguinte mensagem de erro</b></li>
+
+<dl>
+	<dd><tt><b>This program cannot be run in DOS mode.</b></tt>
+</dl>
+
+<p>faça o seguinte:
+
+<ol>
+	<li>Abra o shell do MS-DOS (Windows/Iniciar/Programas/Prompt do MS-DOS)</li>
+	<li>Clique com o botão direito na barra de título</li>
+	<li>Selecione Propriedades</li>
+	<li>Escolha a aba Programa</li>
+	<li>Pressione o botão Avançadas...</li>
+	<li>Assegure-se de que o item "Impedir que os programas de MS-DOS detectem o Windows" não esteja marcado</li>
+	<li>Selecione OK</li>
+	<li>Selecione OK novamente</li>
+	<li>Saia do shell do MS-DOS</li>
+	<li>Reinicie o computador</li>
+</ol>
+
+<br><br>
+<li><b>Se o AppletViewer não carregar os applets</b></li>
+
+<br>você pode tentar o seguinte:
+
+<ol>
+	<li>set HOMEDRIVE=c:
+	<br>set HOMEPATH=\
+	<p>e reiniciar o AppletViewer (na mesma janela de linha de comando)</li>
+<br><br>
+<li>set HOME=c:\</li>
+
+<p>e reiniciar o AppletViewer (na mesma janela de linha de comando)</ol>
+<br>
+Se nada disso funcionar, tente:
+
+<dl>
+	<dd>java -verbose sun.applet.AppletViewer
+</dl>
+
+<p>Isto lista as classes que estão sendo carregadas. A partir desta saída, você pode
+determinar qual classe o AppletViewer está tentando carregar e de onde ele está
+tentando carregá-la. Verifique para se assegurar de que a classe existe e não
+está corrompida de alguma maneira.
+<br><br>
+<li><b>Appletviewer bloqueia</b></li>
+
+<p>Isto acontece com o NT Workstation 4.0, update 3, quando o DISPLAY está
+configurado para "true color". O appletviewer (e talvez outras entidades)
+trava ao começar a executar e depois ao "congelar" o sistema, consumindo 100% do processador.
+<br>Para "testar" isto, execute o "java -verbose sun.applet.AppletView" e observe
+que ele trava ao tentar executar a MToolkit.class.
+
+<br><br>
+<a NAME="winsock"></a>
+<li><b>Problemas com Winsock</b></li>
+
+<p>O Java 2 SDK não inclui o Microsoft Winsock 2.0. É extremamente
+provável que o seu sistema já tenha o Winsock 2.0. O Windows NT 4.0, Windows,
+ME, Windows 2000 e Windows 98 vêm com Winsock 2.0. O Windows 95 vem 
+com o Winsock 1.1 ou 1.2, mas a maioria dos sistemas Windows 95 foram atualizados
+para Winsock 2.0 a esta altura.
+
+<p>Para verificar qual versão do Winsock você tem, procure "winsock.dll".
+Depois, escolha "Propriedades" no menu Arquivo e clique na aba Versão.
+
+<p>Você pode baixar o Winsock 2.0 deste endereço:
+
+<dl>
+	<dd><a href="http://www.microsoft.com/windows95/downloads/contents/wuadmintools/s_wunetworkingtools/w95sockets2/" target="new">http://www.microsoft.com/windows95/downloads/contents/wuadmintools/s_wunetworkingtools/w95sockets2/</a></blockquote>
+</dl>
+
+<p>O URL seguinte contém informações sobre como determinar se os componentes Winsock 2.0 estão instalados em uma plataforma Windows 95:
+
+<dl>
+	<dd><a href="http://support.microsoft.com/support/kb/articles/Q177/7/19.asp" target="new">http://support.microsoft.com/support/kb/articles/Q177/7/19.asp</a>
+</dl>
+
+<br>
+<a NAME="notepad"></a>
+<li><b>Criando arquivos-fonte com o Notepad</b>
+
+<p>No Microsoft Windows, quando você cria um novo arquivo no Microsoft Notepad
+e depois o salva pela primeira vez, o
+Notepad normalmente adiciona a extensão <tt><b>.txt</b></tt> ao nome do arquivo. Portanto,
+o arquivo que você nomeia como <tt><b>Test.java</b></tt> é salvo como <tt><b>Test.java.txt</b></tt>.
+É importante observar que você não pode ver a extensão <tt><b>.txt</b></tt> 
+a menos que você ligue a visualização de extensões de arquivos (no Windows Explorer,
+desmarque "Ocultar extensões para os tipos de arquivos desconhecidos" em Opções de Pasta).
+Para evitar a extensão <tt><b>.txt</b></tt>, coloque o nome do arquivo entre aspas,
+como em <tt><b>"Test.java"</b></tt>, ao digitá-lo na caixa de diálogo Salvar como.</li>
+
+<p>Por outro lado, o Microsoft WordPad não adiciona extensão de arquivo se você não
+fornecer uma -- você deve salvar o arquivo como "Documento de texto".
+
+</ul>
+</dl>
+
+<!--BODYCOPY End-->
+
+<hr>
+
+<p><a href="../../software-win/sj-sdk/j2sdk-1_3_1-win.exe" name="install">Instalar Java&#153; 2 SDK a partir do CD</a>
+
+<p><b>IMPORTANTE:</b> Quando solicitado por seu navegador, escolha "Executar este programa a partir de sua localização atual", clique em OK e siga as instruções à medida que aparecerem na tela.
+
+<p>Também é possível instalar o software diretamente a partir do CD. O programa de instalação (<b>j2sdk-1_3_1-win.exe</b>) está localizado no diretório <b>software-win/sj-sdk/</b> no nível do diretório-raiz deste CD-ROM.
+
+<dl>
+	<dt>Para obter as informações mais recentes sobre o Java&#153; 2 SDK, visite... 
+		<dd><a href="http://java.sun.com/j2se/" target="new">http://java.sun.com/j2se/</a>
+</dl>
+
+<hr WIDTH="100%">
+
+<p align="center"><font size="-1"><a href="win_install-main.htm">Voltar para Instalação do Software</a></font></p>
+
+<p>
+
+</body>
+</html>
